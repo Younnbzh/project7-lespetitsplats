@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <link href="css/style.css" rel="stylesheet" type="text/css">
+  <meta charset="utf-8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Shrikhand&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Manrope:wght@200..800&family=Shrikhand&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer">
+  <link rel="stylesheet" href="css/style.css">
+  <title>Les Petits Plats</title>
+</head>
+
+<body>
+  <header>
+    <a href="/" class="logo">
+      <img src="assets/images/logo.png" alt="Page d'accueil Les Petits Plats">
+    </a>
+    <div class="header-cont">
+      <div class="header-base">CHERCHEZ PARMI PLUS DE 1500 RECETTES DU QUOTIDIEN,SIMPLES ET DÉLICIEUSES</div>
+      <div class="header-search">
+        <input type="text" id="keyword-search" placeholder="Rechercher une recette, un ingrédient, ..." />
+        <span class="header-search-close" id="header-search-close"><i class="fa-solid fa-xmark"></i></span>
+        <span class="header-search-icon"><i class="fa-solid fa-magnifying-glass"></i></span>
+      </div>
+    </div>
+  </header>
+  <main>
+    <div class="filters">
+      <div class="filters-list" id="ingredients">
+        <div class="filters-header">
+          <div class="filters-title">Ingrédients</div>
+          <div class="filters-arrow">
+            <div class="filters-arrow-up"><i class="fa-solid fa-chevron-up"></i></div>
+            <div class="filters-arrow-down"><i class="fa-solid fa-chevron-down"></i></div>
+          </div>
+        </div>
+        <div class="filters-cont">
+          <div class="filters-search">
+            <input type="text" class="tagsearch">
+            <span class="filters-search-close" id="filters-search-close-ingredients"><i class="fa-solid fa-xmark"></i></span>
+            <span class="filters-search-icon"><i class="fa-solid fa-magnifying-glass"></i></span>
+          </div>
+          <ul class="filters-list-ul">
+          </ul>
+        </div>
+      </div>
+      <div class="filters-list" id="appareils">
+        <div class="filters-header">
+          <div class="filters-title">Appareils</div>
+          <div class="filters-arrow">
+            <div class="filters-arrow-up"><i class="fa-solid fa-chevron-up"></i></div>
+            <div class="filters-arrow-down"><i class="fa-solid fa-chevron-down"></i></div>
+          </div>
+        </div>
+        <div class="filters-cont">
+          <div class="filters-search">
+            <input type="text" class="tagsearch">
+            <span class="filters-search-close" id="filters-search-close-appareils"><i class="fa-solid fa-xmark"></i></span>
+            <span class="filters-search-icon"><i class="fa-solid fa-magnifying-glass"></i></span>
+          </div>
+          <ul class="filters-list-ul">
+          </ul>
+        </div>
+      </div>
+      <div class="filters-list" id="ustensiles">
+        <div class="filters-header">
+          <div class="filters-title">Ustensiles</div>
+          <div class="filters-arrow">
+            <div class="filters-arrow-up"><i class="fa-solid fa-chevron-up"></i></div>
+            <div class="filters-arrow-down"><i class="fa-solid fa-chevron-down"></i></div>
+          </div>
+        </div>
+        <div class="filters-cont">
+          <div class="filters-search">
+            <input type="text" class="tagsearch">
+            <span class="filters-search-close" id="filters-search-close-ustensiles"><i class="fa-solid fa-xmark"></i></span>
+            <span class="filters-search-icon"><i class="fa-solid fa-magnifying-glass"></i></span>
+          </div>
+          <ul class="filters-list-ul">
+          </ul>
+          </div>
+      </div>
+      <div class="filters-nb">50 recettes</div>
+      <div class="filters-active">
+      </div>
+    </div>
+    <div class="recipes" id="recipes">
+        
+    </div>
+  </main>
+  <script src="scripts/recipes.js"></script>
+  <script src="scripts/index.js"></script>
+</body>
+</html>
