@@ -94,10 +94,15 @@ const filterRecipes = () => {
         activeTags.ingredients.length === 0 &&
         activeTags.appareils.length === 0 &&
         activeTags.ustensiles.length === 0) {
-        recipesContainer.innerHTML = '';
+        // on affiche toutes les recettes
+        let html = '';
+        for (let i = 0; i < recipes.length; i++) {
+            html += generateRecipeHTML(recipes[i]);
+        }
+        recipesContainer.innerHTML = html;
         // Mise à jour du nombre de recettes
         const nbRecipes = document.querySelector('.filters-nb');
-        nbRecipes.textContent = '0 recettes';
+        nbRecipes.textContent = `${recipes.length} recettes`;
         // On reset les filtres
         const updatedFilters = getUniqueFilters(recipes);
         updateFiltersLists(updatedFilters);
@@ -200,6 +205,15 @@ const searchRecipesNative = () => {
     // initialisation des filtres
     const initialFilters = getUniqueFilters(recipes);
     updateFiltersLists(initialFilters);
+     // Affiche toutes les recettes au chargement
+     let initialHtml = '';
+     for (let i = 0; i < recipes.length; i++) {
+         initialHtml += generateRecipeHTML(recipes[i]);
+     }
+     recipesContainer.innerHTML = initialHtml;
+     const nbRecipes = document.querySelector('.filters-nb');
+     nbRecipes.textContent = `${recipes.length} recettes`;
+     // listener input
     searchInput.addEventListener('input', (e) => {
         currentSearchTerm = e.target.value.toLowerCase();
         // Show hide de la croix dans le champ de recherche
